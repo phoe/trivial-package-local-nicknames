@@ -3,11 +3,11 @@
 (defpackage #:trivial-package-local-nicknames
   (:use #:cl)
   (:import-from
-   #+sbcl #:sb-ext
-   #+ccl  #:ccl
-   #+ecl  #:ext
+   #+sbcl  #:sb-ext
+   #+ccl   #:ccl
+   #+ecl   #:ext
    #+clasp #:ext
-   #+abcl #:ext
+   #+abcl  #:ext
    #:package-local-nicknames
    #:package-locally-nicknamed-by-list
    #:add-package-local-nickname
