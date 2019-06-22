@@ -6,6 +6,7 @@
    #+sbcl #:sb-ext
    #+ccl  #:ccl
    #+ecl  #:ext
+   #+clasp #:ext
    #+abcl #:ext
    #:package-local-nicknames
    #:package-locally-nicknamed-by-list
