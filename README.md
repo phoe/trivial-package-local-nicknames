@@ -1,9 +1,11 @@
 # trivial-package-local-nicknames
-### _Your Name <your.name@example.com>_
 
-This is a project to do ... something.
+This was done:
+
+* So there is a portability library for the PLN API not included
+  in `DEFPACKAGE`
+* So Shinmera finally stops bothering meeeee
 
 ## License
 
-Specify license here
-
+MIT
