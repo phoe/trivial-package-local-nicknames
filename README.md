@@ -2,6 +2,14 @@
 
 This was done so there is a portability library for the PLN API not included in `DEFPACKAGE`.
 
+## Supported implementations
+
+* SBCL
+* CCL (1.12+ - build it from master)
+* ECL
+* Clasp
+* ABCL
+
 ## Tests
 
 `(asdf:test-system :trivial-package-local-nicknames)` runs the rest suite formerly known as 
