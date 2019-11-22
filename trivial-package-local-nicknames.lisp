@@ -28,7 +28,7 @@
     #+ccl   '(:ccl    :cc :quit)
     #+ecl   '(:ext    :ex :exit)
     #+abcl  '(:ext    :ex :quit)
-    #+clasp '(:ext    :ex :quit))
+    #+clasp '(:core   :ex :quit))
 
   (defparameter +pkg-name+ (first +test-data+))
   (defparameter +nn-name+ (second +test-data+))
