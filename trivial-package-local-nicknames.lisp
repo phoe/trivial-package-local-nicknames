@@ -8,6 +8,7 @@
    #+ecl   #:ext
    #+clasp #:ext
    #+abcl  #:ext
+   #+lispworks #:hcl
    #:package-local-nicknames
    #:package-locally-nicknamed-by-list
    #:add-package-local-nickname
@@ -28,7 +29,8 @@
     #+ccl   '(:ccl    :cc :quit)
     #+ecl   '(:ext    :ex :exit)
     #+abcl  '(:ext    :ex :quit)
-    #+clasp '(:core   :ex :quit))
+    #+clasp '(:core   :ex :quit)
+    #+lispworks '(:lispworks  :ex :quit))
 
   (defparameter +pkg-name+ (first +test-data+))
   (defparameter +nn-name+ (second +test-data+))
