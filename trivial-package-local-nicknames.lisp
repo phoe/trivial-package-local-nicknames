@@ -3,12 +3,13 @@
 (defpackage #:trivial-package-local-nicknames
   (:use #:cl)
   (:import-from
-   #+sbcl  #:sb-ext
-   #+ccl   #:ccl
-   #+ecl   #:ext
-   #+clasp #:ext
-   #+abcl  #:ext
+   #+sbcl      #:sb-ext
+   #+ccl       #:ccl
+   #+ecl       #:ext
+   #+abcl      #:ext
+   #+clasp     #:ext
    #+lispworks #:hcl
+   #+allegro   #:excl
    #:package-local-nicknames
    #:package-locally-nicknamed-by-list
    #:add-package-local-nickname
@@ -25,12 +26,13 @@
 
 (progn
   (defparameter +test-data+
-    #+sbcl  '(:sb-ext :sb :exit)
-    #+ccl   '(:ccl    :cc :quit)
-    #+ecl   '(:ext    :ex :exit)
-    #+abcl  '(:ext    :ex :quit)
-    #+clasp '(:core   :ex :quit)
-    #+lispworks '(:lispworks  :ex :quit))
+    #+sbcl      '(:sb-ext    :sb :exit)
+    #+ccl       '(:ccl       :cc :quit)
+    #+ecl       '(:ext       :ex :exit)
+    #+abcl      '(:ext       :ex :quit)
+    #+clasp     '(:core      :ex :quit)
+    #+lispworks '(:lispworks :ex :quit)
+    #+allegro   '(:excl      :ex :exit))
 
   (defparameter +pkg-name+ (first +test-data+))
   (defparameter +nn-name+ (second +test-data+))
