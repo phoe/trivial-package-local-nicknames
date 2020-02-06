@@ -9,6 +9,8 @@ This was done so there is a portability library for the PLN API not included in 
 * ECL
 * Clasp
 * ABCL
+* ACL
+* LispWorks (7.2 or later - unreleased as of `#.(now)`)
 
 ## Tests
 
