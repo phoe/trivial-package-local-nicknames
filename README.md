@@ -5,7 +5,7 @@ This was done so there is a portability library for the PLN API not included in 
 ## Supported implementations
 
 * SBCL
-* CCL (1.12+ - build it from master)
+* CCL
 * ECL
 * Clasp
 * ABCL
