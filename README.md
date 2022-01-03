@@ -10,7 +10,8 @@ This was done so there is a portability library for the PLN API not included in 
 * Clasp
 * ABCL
 * ACL
-* LispWorks (7.2 or later - unreleased as of `#.(now)`)
+* LispWorks (8.0 or later)
+* CLISP (build from [here](https://gitlab.com/gnu-clisp/clisp/-/merge_requests/3) or wait until this branch is merged)
 
 ## Tests
 
