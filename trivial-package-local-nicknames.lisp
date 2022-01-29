@@ -6,10 +6,13 @@
    #+sbcl      #:sb-ext
    #+ccl       #:ccl
    #+ecl       #:ext
+   #+clisp     #:ext
    #+abcl      #:ext
    #+clasp     #:ext
    #+lispworks #:hcl
    #+allegro   #:excl
+   #-(or sbcl ccl ecl clisp abcl
+         clasp lispworks allegro) #:package-local-nicknames
    #:package-local-nicknames
    #:package-locally-nicknamed-by-list
    #:add-package-local-nickname
@@ -30,6 +33,7 @@
     #+ccl       '(:ccl       :cc :quit)
     #+ecl       '(:ext       :ex :exit)
     #+abcl      '(:ext       :ex :quit)
+    #+clisp     '(:ext       :ex :quit)
     #+clasp     '(:core      :ex :quit)
     #+lispworks '(:lispworks :ex :quit)
     #+allegro   '(:excl      :ex :exit))
