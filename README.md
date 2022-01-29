@@ -11,7 +11,7 @@ This was done so there is a portability library for the PLN API not included in 
 * ABCL
 * ACL
 * LispWorks (8.0 or later)
-* CLISP (build from [here](https://gitlab.com/gnu-clisp/clisp/-/merge_requests/3) or wait until this branch is merged)
+* CLISP (`ros install clisp-head`, build from [here](https://gitlab.com/gnu-clisp/clisp/-/merge_requests/3), or wait until this branch is merged)
 
 ## Tests
 
