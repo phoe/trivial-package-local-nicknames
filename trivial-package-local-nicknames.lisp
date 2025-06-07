@@ -11,8 +11,9 @@
    #+clasp     #:ext
    #+lispworks #:hcl
    #+allegro   #:excl
+   #+cmu       #:extensions
    #-(or sbcl ccl ecl clisp abcl
-         clasp lispworks allegro) #:package-local-nicknames
+         clasp lispworks allegro cmu) #:package-local-nicknames
    #:package-local-nicknames
    #:package-locally-nicknamed-by-list
    #:add-package-local-nickname
@@ -36,7 +37,8 @@
     #+clisp     '(:ext       :ex :quit)
     #+clasp     '(:core      :ex :quit)
     #+lispworks '(:lispworks :ex :quit)
-    #+allegro   '(:excl      :ex :exit))
+    #+allegro   '(:excl      :ex :exit)
+    #+cmu       '(:extensions       :ex :quit))
 
   (defparameter +pkg-name+ (first +test-data+))
   (defparameter +nn-name+ (second +test-data+))
