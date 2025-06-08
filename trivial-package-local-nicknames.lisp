@@ -11,9 +11,9 @@
    #+clasp     #:ext
    #+lispworks #:hcl
    #+allegro   #:excl
-   #+cmu       #:extensions
+   #+(and cmu package-local-nicknames)       #:extensions
    #-(or sbcl ccl ecl clisp abcl
-         clasp lispworks allegro cmu) #:package-local-nicknames
+         clasp lispworks allegro (and cmu package-local-nicknames)) #:package-local-nicknames
    #:package-local-nicknames
    #:package-locally-nicknamed-by-list
    #:add-package-local-nickname
