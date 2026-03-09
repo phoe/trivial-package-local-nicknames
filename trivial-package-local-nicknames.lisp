@@ -215,6 +215,29 @@
       (assert (equal "L:CONS" (prin1-to-string cons0)))
       (assert (equal +sym-fullnickname+ (prin1-to-string exit0))))))
 
+(define-test test-package-local-nicknames-nickname-add-two-for-same-package-then-remove
+  (reset-test-packages)
+  ;; Add two local-nicknames for package-...-test-1 to package-...-test-2.
+  (assert (eq (find-package :package-local-nicknames-test-2)
+              (add-package-local-nickname :a :package-local-nicknames-test-1
+                                          :package-local-nicknames-test-2)))
+  (assert (eq (find-package :package-local-nicknames-test-2)
+              (add-package-local-nickname :b :package-local-nicknames-test-1
+                                          :package-local-nicknames-test-2)))
+  ;; Despite being nicknamed "twice", there should be only one element
+  ;; in the list.
+  (assert (equal (list (find-package :package-local-nicknames-test-2))
+                 (package-locally-nicknamed-by-list :package-local-nicknames-test-1)))
+  ;; Removing one instance of being nicknamed should not change
+  ;; anything.
+  (remove-package-local-nickname :b :package-local-nicknames-test-2)
+  (assert (equal (list (find-package :package-local-nicknames-test-2))
+                 (package-locally-nicknamed-by-list :package-local-nicknames-test-1)))
+  ;; Removing all nicknames should lead to no longer being "nicknamed by".
+  (remove-package-local-nickname :a :package-local-nicknames-test-2)
+  (assert (equal '()
+                 (package-locally-nicknamed-by-list :package-local-nicknames-test-1))))
+
 #+sbcl
 (define-test test-package-local-nicknames-package-locks
   ;; TODO Support for other implementations with package locks.
