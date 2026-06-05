@@ -2,6 +2,8 @@
 
 This was done so there is a portability library for the PLN API not included in `DEFPACKAGE`.
 
+Note: UIOP exports these symbols, too. You can use it instead.
+
 ## Supported implementations
 
 * SBCL
